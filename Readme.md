@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Рузанна А.](https://up.htmlacademy.ru/htmlcss-individual/2/user/2189251).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём
+Картавый](https://htmlacademy.ru/profile/artem_k).
 
 ---
 
