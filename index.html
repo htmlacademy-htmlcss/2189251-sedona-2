@@ -44,10 +44,9 @@
               </svg>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link button navigation-button" href="#">Хочу сюда!</a>
-          </li>
         </ul>
+        <div class="navigation-item-last"></div>
+        <a class="navigation-link button navigation-button" href="#">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-index main" data-test="main">
@@ -176,48 +175,93 @@
         </a>
       </section>
     </footer>
-    <!-- <div class="modal-container">
+    <div class="modal-container">
       <div class="modal modal-auth">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
-        </button> -->
-    <!-- Форма записи -->
-    <!-- <section class="reservation">
+        </button>
+        <!-- Форма записи -->
+        <section class="reservation">
           <h2 class="reservation-title">Поиск гостиницы в Седоне</h2>
           <form class="reservation-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="field-group reservation-form-start">
-              <label class="form-label" for="reservation-start">
-                Дата Заезда</label>
+              <label class="form-label reservation-start-label" for="reservation-start">
+                Дата Заезда:</label>
               <input class="field" type="text" id="reservation-start" name="reservation-start"
                 placeholder="27 апреля 2020">
-              <p>Мы не можем отправить вас в прошлое.</p>
             </div>
+            <p>Мы не можем отправить вас в прошлое.</p>
             <div class="field-group reservation-form-end">
-
-              <label class="form-label" for="reservation-end">
-                Дата Выезда</label>
-              <input class="field" type="text" id="reservation-end" name="reservation-end"
+              <label class="form-label reservation-end-label" for="reservation-end">
+                Дата Выезда:</label>
+              <input class="field reservation-end" type="text" id="reservation-end" name="reservation-end"
                 placeholder="1 сентября 2023">
-              <p>На эти даты есть свободные номера. Пока есть.</p>
             </div>
+            <p>На эти даты есть свободные номера. Пока есть.</p>
+            <!-- ------------------------------------------------------------ -->
             <div class="field-group reservation-form-adults">
               <label class="form-label" for="reservation-adults">
-                Взрослые
+                Взрослые:
               </label>
-              <input class="field" type="number" id="reservation-adults" name="reservation-adults" placeholder="1">
+              <div class="wrap-quantity-input">
+                <button class="button-minus button" type="button">
+                  <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.393 9v2h14V9h-14Z" fill="#000" />
+                  </svg>
+                </button>
+                <input class="field" type="number" id="reservation-adults" name="reservation-adults" value="1" min="0"
+                  max="10" required>
+                <button class="button-plus button" type="button">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
+                  </svg>
+                </button>
+              </div>
+              <!-- ------------------------------------------------------------ -->
+
             </div>
+
+            <!-- ------------------------------------------------------------ -->
             <div class="field-group reservation-form-children">
-              <label class="form-label" for="reservation-children">
-                Дети
+              <label class="form-label children" for="reservation-children">
+                Дети:
               </label>
-              <input class="field" type="number" id="reservation-children" name="reservation-children" placeholder="1">
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
+                  </svg>
+                </button>
+                <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                  лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+              <div class="wrap-quantity-input">
+                <button class="button-minus button" type="button">
+                  <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.393 9v2h14V9h-14Z" fill="#000" />
+                  </svg>
+                </button>
+                <input class="field" type="number" id="reservation-children" name="reservation-children" value="1"
+                  min="0" max="10" required>
+                <button class="button-plus button" type="button">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
+                  </svg>
+                </button>
+              </div>
+              <!-- ------------------------------------------------------------ -->
+
             </div>
+
+            <div></div>
+
             <button class="button reservation-submit" type="submit">Найти</button>
           </form>
 
         </section>
       </div>
-    </div> -->
+    </div>
   </body>
 
 </html>
