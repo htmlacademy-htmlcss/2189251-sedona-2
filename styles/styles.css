@@ -69,6 +69,7 @@ body {
 }
 
 
+
 a:focus,
 button:focus,
 input:focus,
@@ -237,7 +238,7 @@ textarea:focus {
 .inner-header-catalog-hotels-background {
   background-color: #83b3d3;
   background-image: url("../images/backgrounds/hotels-filter.jpg");
-   color: #ffffff;
+  color: #ffffff;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 412px;
@@ -527,7 +528,8 @@ textarea:focus {
   align-items: center;
   padding: 0;
   position: relative;
-  grid-template-rows: 64px;
+  /*! grid-template-rows: min64px; */
+  grid-template-rows: minmax(64px, auto);
 }
 
 .navigation-list {
@@ -573,17 +575,23 @@ textarea:focus {
 }
 
 .navigation-link-search.navigation-link {
-  margin-left: 0;
-  margin-right: 9px;
   position: absolute;
   top: 0;
-  right: 37px;
+  right: 30px;
+  padding: 20px 16px 18px 16px;
+  margin: 0;
 }
 
 .navigation-link-liked {
   position: relative;
   right: -12px;
 }
+
+.navigation-link-liked.navigation-link {
+  padding: 20px 16px 18px 16px;
+  margin: 0;
+}
+
 
 .navigation-link-search > svg {
   margin-top: 3px;
@@ -1016,7 +1024,7 @@ div.advantages-item-dark-img.devilish-bridge {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: 212px 28px 21px 36px 37px;
+  grid-template-rows: 211px 28px 21px 36px 37px;
   gap: 16px 20px;
   border: solid #e6e6e6 1px;
   border-radius: 4px;
@@ -1160,6 +1168,10 @@ div.advantages-item-dark-img.devilish-bridge {
   position: relative;
 }
 
+::placeholder {
+  color: #000000;
+}
+
 .min-price input,
 .max-price input {
   padding: 0;
@@ -1173,7 +1185,6 @@ div.advantages-item-dark-img.devilish-bridge {
   color: #000000;
   text-align: left;
   padding-right: 40px;
-  padding-left: 18px;
   letter-spacing: -0.7px;
   font-family: "PT Sans", sans-serif;
 }
@@ -1222,9 +1233,11 @@ div.advantages-item-dark-img.devilish-bridge {
   border-bottom-left-radius: 4px;
   border: none;
   margin-right: 2px;
+  padding-left: 20px;
 }
 
 .max-price input {
+  padding-left: 21px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border: none;
@@ -1292,10 +1305,10 @@ div.advantages-item-dark-img.devilish-bridge {
 
 .select-sorting {
   width: 100%;
-  padding: 8px 14px;
+  padding: 9px 14px;
   padding-right: 48px;
-  font-size: 17px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 21px;
   background-color: #ffffff;
   border: 2px solid #e6e6e6;
   background-image: url("../images/icons/arrow.svg");
@@ -1306,6 +1319,8 @@ div.advantages-item-dark-img.devilish-bridge {
   border-radius: 4px;
   cursor: pointer;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  height: 49px;
 }
 
 .button.apply,
@@ -1343,12 +1358,13 @@ a.button {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  display: none;
+  /* display: none; */
 }
 
 .modal {
   position: relative;
-  margin: 50px auto auto;
+  top: 25%;
+  margin: 0 auto;
   background-color: #ffffff;
   width: 717px;
   height: 576px;

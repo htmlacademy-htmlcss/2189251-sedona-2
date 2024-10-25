@@ -46,13 +46,12 @@
             </a>
           </li>
         </ul>
-        <div class="navigation-item-last"></div>
         <a class="navigation-link button navigation-button" href="#">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-inner main" data-test="main">
-      <div class="inner-header-catalog-hotels-background">
-        <section class="inner-header" data-test="filter">
+      <div class="inner-header-catalog-hotels-background" data-test="filter">
+        <section class="inner-header" >
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -65,7 +64,7 @@
             </li>
           </ul>
         </section>
-        <section class="catalog-hotels" data-test="catalog">
+        <section class="catalog-hotels">
           <h2 class="visually-hidden">Подбор гостиницы</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group infrastructure">
@@ -150,7 +149,7 @@
           </form>
         </section>
       </div>
-      <section class="filtration-result">
+      <section class="filtration-result"  data-test="catalog">
         <div class="filtration-result-header">
           <h2 class="filtration-result-title title">Найдено гостиниц:
             <span class="filtration-result-hotels">38</span>
@@ -211,7 +210,7 @@
             </li>
           </ul>
         </div>
-        <ul class="hotel-list" data-test="catalog">
+        <ul class="hotel-list">
           <li class="hotel-card">
             <a class="card" href="hotel.html"><img src="images/hotels/hotel-amara-resort-spa.jpg" width="300"
                 height="212" alt="гостиница Amara Resort and Spa">
