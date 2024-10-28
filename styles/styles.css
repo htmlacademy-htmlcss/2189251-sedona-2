@@ -582,15 +582,16 @@ body {
 }
 
 .logo {
-  /*! margin-bottom: 21px; */
   position: absolute;
   z-index: 100;
-  /*! top: 0px; */
 }
 
 .link-logo {
   align-self: start;
   grid-area: 1/1/1/2;
+  width: 138px;
+  height: 64px;
+  outline: none;
 }
 
 .navigation-item .navigation-link {
@@ -673,17 +674,6 @@ img.logo::-moz-focus-inner {
   border: 0;
 }
 
-img.logo {
-  text-decoration: none;
-  /* Убирает подчеркивание */
-  outline: none;
-  /* Убирает обводку */
-  border: none;
-  /* Убирает границу */
-  pointer-events: auto;
-  /* Делает элемент активным для взаимодействия */
-}
-
 .navigation-link:not(.button):focus,
 .navigation-link:not(.button):hover,
 .navigation-link:not(.navigation-link):hover,
@@ -705,13 +695,8 @@ img.logo {
   border-bottom: #756257;
 }
 
-.body-inner .navigation-link-index {
-  border-bottom-color: transparent;
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.body-inner .navigation-link-hotels {
+.body-inner .navigation-link-hotels,
+.body-index .navigation-link-index {
   border-bottom-color: #756257;
   pointer-events: none;
   cursor: default;
@@ -949,7 +934,6 @@ div.advantages-item-dark-img.devilish-bridge {
   justify-content: center;
 }
 
-
 .catalog-hotels {
   width: 1060px;
   min-height: 160px;
@@ -992,7 +976,6 @@ div.advantages-item-dark-img.devilish-bridge {
   margin: 0;
 }
 
-
 .filtration-result {
   min-height: 1235px;
   display: flex;
@@ -1016,7 +999,6 @@ div.advantages-item-dark-img.devilish-bridge {
   border: solid #e5e5e5 2px;
   border-radius: 4px;
 }
-
 
 .hotel-card {
   min-height: 438px;
@@ -1143,6 +1125,11 @@ div.advantages-item-dark-img.devilish-bridge {
   background-color: rgb(63, 94, 114);
   border-radius: 50%;
   content: "";
+}
+
+.control-input:focus + .control-mark,
+.control-input:hover + .control-mark {
+  filter: brightness(0.8);
 }
 
 .choice-rental-price {
@@ -1278,13 +1265,17 @@ div.advantages-item-dark-img.devilish-bridge {
 .range-toggle:focus {
   outline: none;
   outline: 3px solid #83b3d3;
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px 5px #00000066;
+
+
 }
 
 .range-toggle:active {
   outline: none;
   outline: 2px solid #83b3d3;
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px 5px #00000066;
+
+
 }
 
 .toggle-min {
@@ -1395,7 +1386,7 @@ a.button {
 
 .modal {
   position: relative;
-  top: 25%;
+  top: 15%;
   margin: 0 auto;
   background-color: #ffffff;
   width: 717px;
@@ -1418,7 +1409,6 @@ a.button {
   background-color: #f2f2f2;
   z-index: 200;
 }
-
 
 .field-group {
   min-height: 48px;
@@ -1457,7 +1447,6 @@ a.button {
   filter: brightness(0.9);
 }
 
-
 .reservation-start-label::after,
 .reservation-end-label::after {
   position: absolute;
@@ -1486,18 +1475,20 @@ a.button {
 }
 
 input.min-price,
-input.max-price {
+input.max-price,
+input.quantity-adults,
+input.quantity-children {
   -moz-appearance: textfield;
 }
 
 input.max-price::-webkit-outer-spin-button,
-input.max-price::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
+input.max-price::-webkit-inner-spin-button,
 input.min-price::-webkit-outer-spin-button,
-input.min-price::-webkit-inner-spin-button {
+input.min-price::-webkit-inner-spin-button,
+input.quantity-adults::-webkit-inner-spin-button,
+input.quantity-adults::-webkit-outer-spin-button,
+input.quantity-children::-webkit-inner-spin-button,
+input.quantity-children::-webkit-outer-spin-button, {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -1511,13 +1502,11 @@ input.min-price::-webkit-inner-spin-button {
 }
 
 .reservation-form-children input {
-
   width: 110px;
   padding: 0 10px;
   text-align: center;
   border-radius: 4px;
 }
-
 
 .reservation-form {
   width: 577px;
@@ -1569,7 +1558,6 @@ input.min-price::-webkit-inner-spin-button {
 .reservation-form-children + div {
   grid-area: 6/ 1/ 7/ 6;
 }
-
 
 .reservation-submit {
   grid-area: 7 / 1 / 8 / 6;
@@ -1707,11 +1695,4 @@ input.min-price::-webkit-inner-spin-button {
 .modal-close-button:active {
   border: transparent;
   border-color: rgba(131, 179, 211, 0.2);
-}
-
-
-a.navigation-link-index {
-  border-bottom-color: #756257;
-  pointer-events: none;
-  cursor: default;
 }
