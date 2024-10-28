@@ -6,6 +6,7 @@
     <title>Седона. Городок в Аризоне.</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body class="body-index">
@@ -57,7 +58,7 @@
       </section>
       <section class="advantages" data-test="advantages">
         <div class="advantages-invite">
-          <h2 class="advantages-title title">Седона — небольшой городок в Аризоне,<br>
+          <h2 class="advantages-title title">Седона — небольшой городок в Аризоне,
             заслуживающий большего!</h2>
           <p class="basic-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
@@ -95,27 +96,24 @@
           </li>
         </ul>
       </section>
-      <section class="services" data-test="service" >
+      <section class="services" data-test="service">
         <div class="services-invite">
           <h2 class="services-title title">Приезжайте в Седону отдохнуть <br> в комфорте и уюте!</h2>
           <p class="text services-text">Опытный персонал и качественное обслуживание!</p>
         </div>
         <ul class="services-list">
           <li class="services-item light ">
-            <div class="advantages-subtitle-icon house"></div>
-            <h3 class="services-subtitle subtitle">Жильё</h3>
+            <h3 class="services-subtitle subtitle house">Жильё</h3>
             <p class="services-text describing-text">Рекомендуем пожить<br> в настоящем мотеле,<br>
               всё как в кино!</p>
           </li>
           <li class="services-item lightest">
-            <div class="advantages-subtitle-icon eat"></div>
-            <h3 class="services-subtitle subtitle">Еда</h3>
+            <h3 class="services-subtitle subtitle eat">Еда</h3>
             <p class="services-text describing-text">Всегда заказывайте<br>
               топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="services-item  light ">
-            <div class="advantages-subtitle-icon souvenir"></div>
-            <h3 class="services-subtitle subtitle">Сувениры</h3>
+            <h3 class="services-subtitle subtitle souvenir">Сувениры</h3>
             <p class="services-text describing-text">Не только китайского,<br> но и настоящего местного производства!
             </p>
           </li>
@@ -126,7 +124,7 @@
         <p class="basic-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
           Седоне
         </p>
-        <a class="button main-search-hotels" href="#">Поиск гостиницы в Седоне</a>
+        <button class="button main-search-hotels" type="button">Поиск гостиницы в Седоне</button>
       </section>
       <section class="newsletter index-newsletter" data-test="subscribe">
         <h2 class="newsletter-title title">Подпишитесь на рассылку</h2>
@@ -164,7 +162,7 @@
         <h2 class="visually-hidden">Телефон для связи</h2>
         <a class="footer-contacts-phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
-      <section class="about-text">
+      <section class="about-text copyright">
         <h2 class="visually-hidden">Разработчик сайта</h2>
         <a class="footer-link" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg viewBox="0 0 115 33" fill="none" width="115" height="33" xmlns="http://www.w3.org/2000/svg">
@@ -192,14 +190,14 @@
               <label class="form-label reservation-start-label" for="reservation-start">
                 Дата Заезда:</label>
               <input class="field" type="text" id="reservation-start" name="reservation-start" value="27 апреля 2020"
-                placeholder="Укажите дату">
+                placeholder="Укажите дату" required>
             </div>
             <p>Мы не можем отправить вас в прошлое.</p>
             <div class="field-group reservation-form-end">
               <label class="form-label reservation-end-label" for="reservation-end">
                 Дата Выезда:</label>
               <input class="field reservation-end" type="text" id="reservation-end" name="reservation-end"
-                value="1 сентября 2023" placeholder="Укажите дату">
+                value="1 сентября 2023" placeholder="Укажите дату" required>
             </div>
             <p>На эти даты есть свободные номера. Пока есть.</p>
             <div class="field-group reservation-form-adults">
@@ -208,6 +206,7 @@
               </label>
               <div class="wrap-quantity-input">
                 <button class="button-minus button" type="button">
+                  <span class="visually-hidden">Уменьшить количество</span>
                   <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.393 9v2h14V9h-14Z" fill="#000" />
                   </svg>
@@ -215,6 +214,7 @@
                 <input class="field" type="number" id="reservation-adults" name="reservation-adults" value="2" min="0"
                   max="10" required>
                 <button class="button-plus button" type="button">
+                  <span class="visually-hidden">Увеличить количество</span>
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
                   </svg>
@@ -227,6 +227,7 @@
               </label>
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button">
+                  <span class="visually-hidden">Информация о заезде с детьми</span>
                   <svg class="tooltip-icon" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="13" cy="13" r="13" fill="#83B3D3" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff" />
@@ -238,6 +239,7 @@
               </span>
               <div class="wrap-quantity-input">
                 <button class="button-minus button" type="button">
+                  <span class="visually-hidden">Уменьшить количество</span>
                   <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.393 9v2h14V9h-14Z" fill="#000" />
                   </svg>
@@ -245,6 +247,7 @@
                 <input class="field" type="number" id="reservation-children" name="reservation-children" value="2"
                   min="0" max="10" required>
                 <button class="button-plus button" type="button">
+                  <span class="visually-hidden">Увеличить количество</span>
                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
                   </svg>
