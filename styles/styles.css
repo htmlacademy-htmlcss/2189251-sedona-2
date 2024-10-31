@@ -471,7 +471,6 @@ body {
 
 .main-search-hotels {
   color: #ffffff;
-  /*! background-color: #756157; */
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -480,10 +479,6 @@ body {
   min-height: 52px;
   width: 376px;
   padding: 8px 50px;
-}
-
-.transparent {
-  background-color: transparent;
 }
 
 .newsletter-title {
